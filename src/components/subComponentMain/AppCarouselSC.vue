@@ -52,16 +52,16 @@ export default {
 </script>
 
 <template>
-  <section
-    v-animateonscroll="{
-      enterClass: 'animate-fadein',
-      leaveClass: 'animate-fadeout',
-    }"
-    class="md:max-w-screen-xl mx-auto test min-h-[500px] my-2 flex animate-duration-1000"
-  >
+  <section class="md:max-w-screen-xl mx-auto test min-h-[500px] my-2 flex">
     <div class="grid grid-cols-4 grid-rows-full gap-4 grow">
       <!-- card full  -->
       <div
+        v-motion
+        :initial="{ opacity: 0, x: -400 }"
+        :enter="{ opacity: 0, x: -400 }"
+        :visible="{ opacity: 1, x: 0 }"
+        :delay="100"
+        :duration="800"
         class="group row-start-1 col-span-2 row-end-5 relative overflow-hidden"
       >
         <div
