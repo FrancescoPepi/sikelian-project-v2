@@ -192,7 +192,7 @@ export default {
 .p-menubar {
   border: 0;
   background: transparent;
-  padding: 8px 24px 8px 12px;
+  padding: 0 24px 0 12px;
 }
 .bg {
   /* background-color: lightgreen; */

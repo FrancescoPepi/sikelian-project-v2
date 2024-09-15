@@ -48,7 +48,7 @@ export default {
       </ul>
     </div>
   </div> -->
-  <div id="pagetop" :class="scY >= 400 ? 'o-100' : 'o-0'" @click="toTop">
+  <div id="pagetop" :class="scY >= 300 ? 'o-100' : 'o-0'" @click="toTop">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="48"

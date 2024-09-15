@@ -20,6 +20,8 @@ import Card from "primevue/card";
 import Badge from "primevue/badge";
 import OverlayBadge from "primevue/overlaybadge";
 import Chip from "primevue/chip";
+import Tag from "primevue/tag";
+
 // import AnimateOnScroll from "primevue/animateonscroll";
 
 // FONTAWSOME
@@ -97,6 +99,7 @@ app.use(PrimeVue, {
 app.use(MotionPlugin);
 app.component("Button", Button);
 app.component("Chip", Chip);
+app.component("Tag", Tag);
 app.component("Card", Card);
 app.component("Divider", Divider);
 app.component("Badge", Badge);
