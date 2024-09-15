@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-
+import { MotionPlugin } from "@vueuse/motion";
 // ADD PRIMEVUE COMPONENTS UI
 import PrimeVue from "primevue/config";
 import Aura from "@primevue/themes/aura";
@@ -20,7 +20,9 @@ import Card from "primevue/card";
 import Badge from "primevue/badge";
 import OverlayBadge from "primevue/overlaybadge";
 import Chip from "primevue/chip";
-import AnimateOnScroll from "primevue/animateonscroll";
+import Tag from "primevue/tag";
+
+// import AnimateOnScroll from "primevue/animateonscroll";
 
 // FONTAWSOME
 /* import the fontawesome core */
@@ -88,14 +90,16 @@ library.add(
 //   faLayerGroup
 
 const app = createApp(App);
+// app.directive("animateonscroll", AnimateOnScroll);
 app.use(PrimeVue, {
   theme: {
     preset: Aura,
   },
 });
-
+app.use(MotionPlugin);
 app.component("Button", Button);
 app.component("Chip", Chip);
+app.component("Tag", Tag);
 app.component("Card", Card);
 app.component("Divider", Divider);
 app.component("Badge", Badge);
@@ -108,4 +112,3 @@ app.component("Menubar", Menubar);
 app.component("InputText", InputText);
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.mount("#app");
-app.directive("animateonscroll", AnimateOnScroll);

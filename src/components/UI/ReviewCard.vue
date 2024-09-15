@@ -1,6 +1,6 @@
 <template>
   <figure
-    class="relative max-w-80 cursor-pointer overflow-hidden rounded-xl border p-2 border-gray-950/[.3] bg-white hover:bg-gray-950/[.1] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+    class="relative max-w-80 cursor-pointer overflow-hidden rounded-xl border px-2 pt-1 border-gray-950/[.3] bg-white hover:bg-gray-950/[.1] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
   >
     <div class="group grid grid-rows-1 grid-flow-col items-center">
       <section class="flex flex-col gap-1">
@@ -16,7 +16,7 @@
           </div>
         </div>
         <p
-          class="absolute top-0 right-2 text-[0.6rem] text-end font-medium dark:text-white/40"
+          class="absolute top-[-2px] right-2 text-[0.6rem] text-end font-medium dark:text-white/40"
         >
           {{ datetime }}
         </p>

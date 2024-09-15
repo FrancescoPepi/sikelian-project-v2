@@ -25,7 +25,7 @@ export default {
 
 <template>
   <AppHeader id="header" />
-  <AppMain />
+  <AppMain class="scroll-smooth focus:scroll-auto" />
   <GridPattern
     :squares="[
       [30, 40],
@@ -66,6 +66,6 @@ export default {
   z-index: 90;
 }
 #header + * {
-  margin-top: 1193px;
+  margin-top: 193px;
 }
 </style>
