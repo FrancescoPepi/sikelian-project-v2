@@ -7,9 +7,9 @@
         <div class="flex flex-row gap-1">
           <Avatar :image="img" class="min-w-max" shape="circle" />
           <div class="flex flex-col text-end w-full text-[0.6rem]">
-            <figcaption class="font-medium dark:text-white">
-              {{ name }}
-            </figcaption>
+            <!-- <figcaption class="font-medium dark:text-white"> -->
+            {{ name }}
+            <!-- </figcaption> -->
             <p class="font-medium dark:text-white/40">
               {{ username }}
             </p>
