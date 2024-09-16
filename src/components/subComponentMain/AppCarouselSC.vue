@@ -52,16 +52,18 @@ export default {
 </script>
 
 <template>
-  <section class="md:max-w-screen-xl mx-auto test min-h-[500px] my-2 flex">
-    <div class="grid grid-cols-4 grid-rows-full gap-2 grow sm:overflow-hidden">
+  <section
+    class="max-w-screen-sm md:max-w-screen-xl mx-auto test min-h-[500px] my-10 md:my-2 flex px-3 md:px-0"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-full gap-3 grow">
       <!-- card full  -->
       <div
         v-motion
-        :initial="{ opacity: 0, x: -400 }"
+        :initial="{ opacity: 0, x: -200 }"
         :visible="{ opacity: 1, x: 0 }"
         :delay="100"
         :duration="800"
-        class="group row-start-1 col-span-2 row-end-5 relative overflow-hidden"
+        class="group md:row-start-1 col-span-1 md:col-span-2 md:row-end-5 relative overflow-hidden min-h-[350px]"
       >
         <div
           class="bg-white border rounded-xl shadow-custom bg-center hover:bg-zinc-500 grayscale-[0.4] group-hover:grayscale-0 relative w-full h-full transition duration-300 ease-in-out overflow-hidden max-h-[500px]"
@@ -117,11 +119,11 @@ export default {
 
       <!-- card 1 -->
       <div
-        class="group col-span-1 row-span-2 relative overflow-hidden animate-duration-1000"
+        class="group col-span-1 md:row-span-2 relative overflow-hidden md:min-h-max min-h-[350px]"
         v-motion
         :initial="{ opacity: 0, y: 200 }"
         :visible="{ opacity: 1, y: 0 }"
-        :delay="150 + i * 200"
+        :delay="i * 200"
         :duration="800"
         v-for="i in 4"
       >
@@ -140,14 +142,14 @@ export default {
           />
           <!-- Title and Paragraph (both appear from the bottom) -->
           <div
-            class="absolute inset-0 flex flex-col justify-end z-10 transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500 ease-in-out"
+            class="absolute inset-0 flex flex-col justify-end z-10 transform md:translate-y-10 group-hover:translate-y-0 transition-transform duration-500 ease-in-out"
           >
             <div
               class="bg-gradient-to-b to-secondary from-secondary/5 transform transition-transform duration-500 ease-in-out px-2"
             >
               <!-- Titolo visibile, parte dal bordo inferiore -->
               <h2
-                class="text-white text-xl font-bold transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"
+                class="text-white text-xl font-bold transform md:translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out"
               >
                 {{ truncatedTitle }}
               </h2>
@@ -155,7 +157,7 @@ export default {
               <!-- Paragrafo che appare al passaggio del mouse sotto il titolo -->
               <!-- v-if="dataNotice[0].paragraph" -->
               <p
-                class="text-primary font-medium text-sm mt-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 transition-all duration-500 ease-in-out [text-shadow:_0_1px_0_#ffffff7d]"
+                class="hidden md:block text-primary font-medium text-sm mt-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 transition-all duration-500 ease-in-out [text-shadow:_0_1px_0_#ffffff7d]"
               >
                 {{ truncatedParagraph }}
               </p>
@@ -163,7 +165,7 @@ export default {
           </div>
         </div>
         <div
-          class="absolute -top-full -left-full group-hover:top-5 z-20 group-hover:left-2 transform transition-all duration-500 ease-in-out animate-bounce opacity-80"
+          class="absolute top-5 left-2 md:-top-full md:-left-full group-hover:top-5 z-20 group-hover:left-2 transform transition-all duration-500 ease-in-out animate-bounce opacity-80"
         >
           <Button
             icon="angle-right"
