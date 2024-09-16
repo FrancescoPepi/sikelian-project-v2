@@ -53,7 +53,7 @@ export default {
 
 <template>
   <section class="md:max-w-screen-xl mx-auto test min-h-[500px] my-2 flex">
-    <div class="grid grid-cols-4 grid-rows-full gap-2 grow">
+    <div class="grid grid-cols-4 grid-rows-full gap-2 grow sm:overflow-hidden">
       <!-- card full  -->
       <div
         v-motion

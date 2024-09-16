@@ -53,7 +53,7 @@ export default {
 
 <template>
   <section class="md:max-w-screen-lg mx-auto test min-h-[500px] my-2 flex">
-    <div class="grid grid-cols-3 grid-rows-full gap-2 grow">
+    <div class="grid grid-cols-3 grid-rows-full gap-2 grow sm:overflow-hidden">
       <!-- card 1 -->
       <div
         class="group col-span-1 row-span-2 relative overflow-hidden animate-duration-1000"
